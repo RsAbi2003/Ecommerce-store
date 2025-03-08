@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { useCart } from '../pages/context/cartcontext';
-import Layout from '../components/layout';
 import Image from 'next/image';
 
 const products = [
@@ -11,12 +9,7 @@ const products = [
 ];
 
 const Home = () => {
-  const { addCart } = useCart();
-
-  const handleAddToCart = (product: typeof products[0]) => {
-    addCart(product);
-  };
-
+  
   return (
     <div className="py-8 px-4">
       <h1 className="text-4xl font-bold text-center mb-8">Welcome to Our E-Commerce Store</h1>
